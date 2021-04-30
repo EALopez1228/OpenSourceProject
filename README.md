@@ -1,6 +1,6 @@
 # OpenSourceProject
 
 CPSC254-OpenSourceProject
-TEAM MEMBERS: Emilio Lopez, Fransisco Bolanos, Zach Serna
+TEAM MEMBERS: Emilio Lopez, Francisco Bolanos, Zach Serna
 
 PROGRAMMING LANGUAGE USED: Python
