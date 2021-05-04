@@ -58,6 +58,8 @@ CONTRIBUTION TO BASE CODE:
 See "Modifications" above
 
 CODE DESIGN:
+We added comments to the more difficult to understand portions of the code for clarity's sake as well as
+any lines of code we personally added.
 
 
 
