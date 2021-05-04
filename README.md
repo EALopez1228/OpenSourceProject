@@ -16,7 +16,8 @@ entertaining. We did this by adding the following features:
 ISSUES ENCOUNTERED:
 A major struggle for us was simply learning a new language. Most of our group had little to no 
 experience with Python, so it took us some time to understand how the language worked exactly.
-When modifying the car game, adding sound effects 
+When modifying the car game, adding sound effects proved to be troublesome as properly 
+locating the sound was difficult with an overall lack of Python experience.
 
 MODIFICATIONS:
 
