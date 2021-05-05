@@ -1,10 +1,18 @@
 # Hard version of memory game (10x10)
 from random import *
 from turtle import *
+from time import *
+from sys import *
 from freegames import path
 
 #Creating the picture and tile objects
-car = path('car.gif')
+image_dic = {} #Making a random image to appear when doing puzzle
+image_dic['car'] = path('car.gif')
+image_dic['dino'] = path('dinosaur.gif')
+image_dic['house'] = path('house.gif')
+image_dic['dog'] = path('dog.gif')
+image_dic['nova'] = path('supernova.gif')
+image = choice(list(image_dic.values()))
 tiles = list(range(50)) * 2
 state = {'mark': None}
 hide = [True] * 100
@@ -22,7 +30,7 @@ def square(x, y):
         left(90)
     end_fill()
 
-#Indexes of each tile
+#Indexes of each tile (1-100)
 def index(x, y):
     "Convert (x, y) coordinates to tiles index."
     return int((x + 200) // 40 + ((y + 200) // 40) * 10)
@@ -39,17 +47,18 @@ def tap(x, y):
     mark = state['mark']
 
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
-        state['mark'] = spot
+        state['mark'] = spot #if you click somewhere outside the boxes get error
     else:
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None
 
+#Drawing the images and tiles
 def draw():
     "Draw image and tiles."
     clear()
     goto(0, 0)
-    shape(car)
+    shape(image)
     stamp()
 
     for count in range(100):
@@ -71,7 +80,7 @@ def draw():
 #Shuffling of tile numbers and creating the viewer
 shuffle(tiles)
 setup(420, 420, 370, 0)
-addshape(car)
+addshape(image)
 hideturtle()
 tracer(False)
 onscreenclick(tap)
