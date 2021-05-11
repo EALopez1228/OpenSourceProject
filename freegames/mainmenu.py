@@ -3,22 +3,27 @@ from turtle import *
 import os
 
 tiles = [
-    [-600, 300],
-    [-300, 300],
-    [0, 300],
-    [300, 300],
-    [-600, 0],
-    [-300, 0],
-    [0, 0],
-    [300, 0],
-    [-600, -300],
-    [-300, -300],
-    [0, -300],
-    [300, -300],
-    [-600, -600],
-    [-300, -600],
-    [0, -600],
-    [300, -600]
+    [-1050, 150],
+    [-750, 150],
+    [-450, 150],
+    [-150, 150],
+    [150, 150],
+    [450, 150],
+    [750, 150],
+    [-1050, -150],
+    [-750, -150],
+    [-450, -150],
+    [-150, -150],
+    [150, -150],
+    [450, -150],
+    [750, -150],
+    [-1050, -450],
+    [-750, -450],
+    [-450, -450],
+    [-150, -450],
+    [150, -450],
+    [450, -450],
+    [750, -450]
 ]
 
 def checkBox(clicked):
@@ -30,58 +35,75 @@ def checkBox(clicked):
         index = index + 1
 
 def RunGame(boxClicked):
+    cwd = os.path.dirname(os.path.realpath(__file__))
 
     if(boxClicked == 0):
-        os.system("ant.py")
+        os.system('python3 ' + cwd + ' /ant.py')
     elif(boxClicked == 1):
-        os.system("bagels.py")
+        os.system('python3 ' + cwd + ' /bagels.py')
     elif(boxClicked == 2):
-        os.system("bounce.py")
+        os.system('python3 ' + cwd + ' /bounce.py')
     elif(boxClicked == 3):
-        os.system("cannon.py")
+        os.system('python3 ' + cwd + ' /cannon.py')
     elif(boxClicked == 4):
-        os.system("connect.py")
+        os.system('python3 ' + cwd + ' /connect.py')
     elif(boxClicked == 5):
-        os.system("crypto.py")
+        os.system('python3 ' + cwd + ' /crypto.py')
     elif(boxClicked == 6):
-        os.system("fidget.py")
+        os.system('python3 ' + cwd + ' /fidget.py')
     elif(boxClicked == 7):
-        os.system("flappy.py")
+        os.system('python3 ' + cwd + ' /flappy.py')
     elif(boxClicked == 8):
-        os.system("guess.py")
+        os.system('python3 ' + cwd + ' /guess.py')
     elif(boxClicked == 9):
-        os.system("life.py")
+        os.system('python3 ' + cwd + ' /life.py')
     elif(boxClicked == 10):
-        os.system("maze.py")
+        os.system('python3 ' + cwd + ' /maze.py')
     elif(boxClicked == 11):
-        os.system("memory.py")
+        os.system('python3 ' + cwd + ' /memory.py')
     elif(boxClicked == 12):
-        os.system("minesweeper.py")
+        os.system('python3 ' + cwd + ' /minesweeper.py')
     elif(boxClicked == 13):
-        os.system("pacman.py")
+        os.system('python3 ' + cwd + ' /pacman.py')
     elif(boxClicked == 14):
-        os.system("paint.py")
+        os.system('python3 ' + cwd + ' /paint.py')
     elif(boxClicked == 15):
-        os.system("pong.py")
+        os.system('python3 ' + cwd + ' /pong.py')
+    elif(boxClicked == 16):
+        os.system('python3 ' + cwd + ' /simonsays.py')
+    elif(boxClicked == 17):
+        os.system('python3 ' + cwd + ' /snake.py')
+    elif(boxClicked == 18):
+        os.system('python3 ' + cwd + ' /tictactoe.py')
+    elif(boxClicked == 19):
+        os.system('python3 ' + cwd + ' /tiles.py')
+    elif(boxClicked == 20):
+        os.system('python3 ' + cwd + ' /tron.py')
 
 
 def grid():
-    square(-600, 300, 300, 'red')
-    square(-300, 300, 300, 'green')
-    square(0, 300, 300, 'blue')
-    square(300, 300, 300, 'purple')
-    square(-600, 0, 300, 'green')
-    square(-300, 0, 300, 'red')
-    square(0, 0, 300, 'purple')
-    square(300, 0, 300, 'blue')
-    square(-600, -300, 300, 'blue')
-    square(-300, -300, 300, 'purple')
-    square(0, -300, 300, 'red')
-    square(300, -300, 300, 'green')
-    square(-600, -600, 300, 'purple')
-    square(-300, -600, 300, 'blue')
-    square(0, -600, 300, 'green')
-    square(300, -600, 300, 'red')
+    square(-1050, 150, 300, 'red')
+    square(-750, 150, 300, 'blue')
+    square(-450, 150, 300, 'red')
+    square(-150, 150, 300, 'blue')
+    square(150, 150, 300, 'red')
+    square(450, 150, 300, 'blue')
+    square(750, 150, 300, 'red')
+    square(-1050, -150, 300, 'blue')
+    square(-750, -150, 300, 'red')
+    square(-450, -150, 300, 'blue')
+    square(-150, -150, 300, 'red')
+    square(150, -150, 300, 'blue')
+    square(450, -150, 300, 'red')
+    square(750, -150, 300, 'blue')
+    square(-1050, -450, 300, 'red')
+    square(-750, -450, 300, 'blue')
+    square(-450, -450, 300, 'red')
+    square(-150, -450, 300, 'blue')
+    square(150, -450, 300, 'red')
+    square(450, -450, 300, 'blue')
+    square(750, -450, 300, 'red')
+
 
 def tap(x, y):
     "Respond to screen tap."
@@ -100,7 +122,7 @@ def start(x, y):
     onscreenclick(tap)
 
 
-setup(1200,1200, 370, 0)
+setup(2100,900, 370, 0)
 hideturtle()
 tracer(False)
 grid()
