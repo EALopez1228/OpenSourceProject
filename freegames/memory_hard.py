@@ -1,4 +1,13 @@
 # Hard version of memory game (10x10)
+"""
+Changes:
+1. Changed 8x8 to 10x10
+2. Added more images 
+3. Randomized which image would appear at the end
+4. Raised numbers allowed in game
+5. Changed font size to not overstep on other tiles
+"""
+
 from random import *
 from turtle import *
 from time import *
