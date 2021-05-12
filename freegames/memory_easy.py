@@ -1,4 +1,11 @@
 #creating an easy version of the memory game (4x4)
+"""
+Changes:
+1. Changed 8x8 to 4x4
+2. Added more images 
+3. Randomized which image would appear at the end
+4. Lowered numbers allowed in game
+"""
 from random import *
 from turtle import *
 from time import *
