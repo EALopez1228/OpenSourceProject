@@ -29,19 +29,19 @@ tiles = [
 games = [
     "Ant",
     "Bagels",
-    "Bounce",
     "Cannon",
+    "Cannon+",
+    "Cannon++",
     "Connect",
-    "Crypto",
-    "Fidget",
     "Flappy",
     "Guess",
     "Life",
     "Maze",
     "Memory",
+    "Memory+",
     "Minesweep",
     "Pacman",
-    "Pain",
+    "Paint",
     "Pong",
     "Simon",
     "Snake",
@@ -66,25 +66,25 @@ def RunGame(boxClicked):
     elif(boxClicked == 1):
         os.system('python3 ' + cwd + '/bagels.py')
     elif(boxClicked == 2):
-        os.system('python3 ' + cwd + '/bounce.py')
+        os.system('python3 ' + cwd + '/cannon_easy.py')
     elif(boxClicked == 3):
         os.system('python3 ' + cwd + '/cannon.py')
     elif(boxClicked == 4):
-        os.system('python3 ' + cwd + '/connect.py')
+        os.system('python3 ' + cwd + '/cannon_hard.py')
     elif(boxClicked == 5):
-        os.system('python3 ' + cwd + '/crypto.py')
+        os.system('python3 ' + cwd + '/connect.py')
     elif(boxClicked == 6):
-        os.system('python3 ' + cwd + '/fidget.py')
-    elif(boxClicked == 7):
         os.system('python3 ' + cwd + '/flappy.py')
-    elif(boxClicked == 8):
+    elif(boxClicked == 7):
         os.system('python3 ' + cwd + '/guess.py')
-    elif(boxClicked == 9):
+    elif(boxClicked == 8):
         os.system('python3 ' + cwd + '/life.py')
-    elif(boxClicked == 10):
+    elif(boxClicked == 9):
         os.system('python3 ' + cwd + '/maze.py')
+    elif(boxClicked == 10):
+        os.system('python3 ' + cwd + '/memory_easy.py')
     elif(boxClicked == 11):
-        os.system('python3 ' + cwd + '/memory.py')
+        os.system('python3 ' + cwd + '/memory_hard.py')
     elif(boxClicked == 12):
         os.system('python3 ' + cwd + '/minesweeper.py')
     elif(boxClicked == 13):

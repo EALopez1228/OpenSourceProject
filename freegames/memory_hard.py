@@ -13,14 +13,18 @@ from turtle import *
 from time import *
 from sys import *
 from freegames import path
+import os
+
+#This holds the value of the current working directory for easier file referencing
+cwd = os.path.dirname(os.path.realpath(__file__))
 
 #Creating the picture and tile objects
 image_dic = {} #Making a random image to appear when doing puzzle
-image_dic['car'] = path('car.gif')
-image_dic['dino'] = path('dinosaur.gif')
-image_dic['house'] = path('house.gif')
-image_dic['dog'] = path('dog.gif')
-image_dic['nova'] = path('supernova.gif')
+image_dic['car'] = path(cwd + '/car.gif')
+image_dic['dino'] = path(cwd + '/dinosaur.gif')
+image_dic['house'] = path(cwd + '/house.gif')
+image_dic['dog'] = path(cwd + '/dog.gif')
+image_dic['nova'] = path(cwd + '/supernova.gif')
 image = choice(list(image_dic.values()))
 tiles = list(range(50)) * 2
 state = {'mark': None}

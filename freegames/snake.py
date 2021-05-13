@@ -8,6 +8,11 @@ from playsound import playsound
 from turtle import *
 from random import randrange
 from freegames import square, vector
+import os
+
+#This holds the value of the current working directory for easier file referencing
+cwd = os.path.dirname(os.path.realpath(__file__))
+
 
 
 #Globals to keep track of gamespeed, snake and food spawning
@@ -18,11 +23,10 @@ gamespeed = 50 #default snake speed
 
 #Plays a buzzer sound, called when the user has lost the game
 def gameOver():
-    #winsound.PlaySound('buzzer_x.wav',winsound.SND_ASYNC)
-    playsound('roblox.mp3', False)
+    playsound(cwd + '/roblox.mp3')
 
 #We used 'bgpic' from the turtle library to change the background from white to a chosen gif
-bgpic("forest.gif")
+bgpic(cwd + "/forest.gif")
 
 #Change handles snake's direction.
 def change(x, y):
@@ -57,7 +61,7 @@ def move():
         print('Snake:', len(snake))
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
-        playsound("ping.wav", False)
+        playsound(cwd + "/ping.wav")
         gamespeed -= 1
     else:
         snake.pop(0)

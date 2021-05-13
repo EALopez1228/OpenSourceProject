@@ -16,23 +16,24 @@ from playsound import playsound
 from random import randrange
 from turtle import *
 from freegames import vector
+import os
+#This holds the value of the current working directory for easier file referencing
+cwd = os.path.dirname(os.path.realpath(__file__))
 
 
 #We used bgpic from the turtle library to change the background from white to a chosen gif
-bgpic("star2.gif")
+bgpic(cwd + "/star2.gif")
 ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
 
 #Manages the sound effects, is called when you fire the cannon
 def play():
-    #winsound.Beep(500,50) 
-    playsound('laser.wav', False)
+    playsound(cwd + '/laser.wav')
 
 #Plays a buzzer sound, called when the user has lost the game
 def gameOver():
-    #winsound.PlaySound('buzzer_x.wav',winsound.SND_ASYNC)
-    playsound('buzzer_x.wav', False)
+    playsound(cwd + '/buzzer_x.wav')
 
 #Handles what actions will be taken when the user taps the screen 
 def tap(x, y):
