@@ -25,7 +25,14 @@ would have the tiles just in the lower left corner and the rest of the picture w
 as if the rest of the tiles were uncovered. Plus when clicking on the 4x4 tiles in the lower
 left corner not all of the numbers would appear correctly. Sometimes when clicking those tiles
 the numbers would appear above the tile or somewhere else completely. This was thankfully resolved
-when we were able to figure out how to alter two functions in the program
+when we were able to figure out how to alter two functions in the program.
+
+DEPENDENCIES:
+In order to run the program properly, you will need Tkinter, playsound, and Turtle which can be installed via the Python console.
+These can be installed with a simple installation command: $ pip install (Program)
+
+RUNNING THE PROGRAM:
+To run the program, simply download the zip attached to the submission, install the dependencies, and use the command: $ python3 -m freegames.mainmenu
 
 MODIFICATIONS:
 
