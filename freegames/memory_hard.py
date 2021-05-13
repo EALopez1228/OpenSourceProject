@@ -2,7 +2,7 @@
 """
 Changes:
 1. Changed 8x8 to 10x10
-2. Added more images 
+2. Added more images
 3. Randomized which image would appear at the end
 4. Raised numbers allowed in game
 5. Changed font size to not overstep on other tiles
@@ -35,7 +35,7 @@ def square(x, y):
     color('black', 'white')
     begin_fill()
     for count in range(4):
-        forward(80)
+        forward(40)
         left(90)
     end_fill()
 
